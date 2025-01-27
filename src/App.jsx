@@ -1,5 +1,6 @@
 import React from "react";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
+import HomePage from "./Components/HomePage";
 import NavBar from "./Components/Navbar";
 import "./App.css";
 
@@ -25,6 +26,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <NavBar />
+      <HomePage/>
     </ThemeProvider>
   );
 };
