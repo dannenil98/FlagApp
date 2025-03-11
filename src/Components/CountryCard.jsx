@@ -15,16 +15,13 @@ const CountryCard = ({ country, darkMode, loading }) => {
     height: "100%",
     transition: "0.3s",
     cursor: "pointer",
-    backgroundColor: darkMode ? "#2B3844" : "#FFFFFF",
+    backgroundColor: darkMode ? "rgb(66, 82, 92)" : "#FFFFFF",
     boxShadow: darkMode
-      ? "none"
+      ? "rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px"
       : "rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px",
+
     "&:hover": {
-      transform: "scale(1.05)",
-      boxShadow: darkMode
-        ? "rgba(255, 255, 255, 0.25) 0px 8px 16px -4px"
-        : "rgba(0, 0, 0, 0.3) 0px 8px 16px -4px",
-      backgroundColor: darkMode ? "#2B3844" : "#f0f0f0",
+      filter: darkMode ? "brightness(1.2)" : "brightness(0.95)",
     },
   };
 
@@ -120,12 +117,13 @@ const CountryCard = ({ country, darkMode, loading }) => {
           sx={{
             objectFit: "cover",
             width: "100%",
+            zIndex: 0, // Bilden ska vara under overlay
           }}
         />
         <CardContent
           sx={{
             flexGrow: 1,
-            backgroundColor: darkMode ? "rgb(66, 82, 92)" : "#FFFFFF",
+            zIndex: 2, // Textinnehållet ska vara över overlay
           }}
         >
           <Typography
