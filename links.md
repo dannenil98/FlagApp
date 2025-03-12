@@ -1,2 +1,2 @@
 - [Github repository](https://github.com/dannenil98/FlagApp/tree/master)
-- [Deployat projekt](https://flagapp9898.netlify.app/)
+- [Deployat projekt](https://dannenilflagapp.netlify.app/)
