@@ -1,0 +1,8 @@
+[build]
+  publish = "dist"  # Byt ut till den mapp där dina byggfiler ligger (exempelvis "build" om du använder Create React App)
+  command = "npm run build" # Eller det kommando du använder för att bygga ditt projekt
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
